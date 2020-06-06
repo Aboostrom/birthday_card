@@ -129,7 +129,7 @@
     }
     .birthday-wish {
       font-family: "Bookman Old Style", serif;
-      font-size: 40px;
+      font-size: 36px;
       position: absolute;
       right: 0;
       left: 0;
@@ -145,7 +145,7 @@
     }
     .directions {
       font-family: "Geneva", sans-serif;
-      font-size: 20px;
+      font-size: 21px;
       position: absolute;
       top: 0;
       left: 0;
@@ -153,7 +153,7 @@
     }
     .incredibles {
       font-family: "Bookman Old Style", serif;
-      font-size: 34px;
+      font-size: 35px;
       position: absolute;
       color: yellow;
       -webkit-text-stroke: 1px black;
