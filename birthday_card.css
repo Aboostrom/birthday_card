@@ -1,0 +1,178 @@
+@media (max-width: 3780px) and (-webkit-min-device-pixel-ratio: 1) {
+    .card_holder {
+      height: 567px;
+    }
+    .card_container {
+      height: 567px;
+    }
+    
+    /* entire container, keeps perspective */
+    .flip-container {
+      -webkit-perspective: 1000px;
+      perspective: 1000px;
+      z-index: 10;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 0px;
+    }
+    
+    /* flip speed goes here */
+    .flipper, .inside {
+      transition: 2s;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      position: relative;
+    }
+    
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper {
+      transform: rotateY(-180deg);
+      -webkit-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+    }
+
+    /* hide back of pane during swap */
+    .front, .back {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* front pane, placed above back */
+    .front {
+      z-index: 10;
+      width: 500px;
+      height: 567px;
+      padding: 0px;
+      
+      /* for firefox 31 */
+      transform: rotateX(0deg);
+    }
+
+    /* back, initially hidden pane */
+    .back {
+      z-index: 5;
+      width: 500px;
+      height: 567px;
+      padding: 0px;
+      transform: rotateX(180deg);
+      -webkit-transform: rotateX(180deg);
+    }
+
+    .inside {
+      z-index: -1;
+      width: 500px;
+      height: 567px;
+      padding: 0px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      
+      /* for firefox 31 */
+    }
+
+    .kinetic {
+      display: block !important;
+      max-height: none !important;
+      height: 567px !important;
+      width: 0px !important;
+      overflow: visible !important;
+    }
+    .fallback {
+      display: none !important;
+    }
+    .kids {
+      width: 75%;
+      max-width: 500px;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+    .kids-inside {
+      width: 40%;
+      max-width: 500px;
+      z-index: 0;
+      position: inherit;
+      margin-top: 230px;
+      margin-left: -120px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+    .balloon {
+      font-size: 150px;
+      position: absolute;
+      top: 29%;
+      bottom: 71%;
+      right: 58%;
+      left: 42%;
+    }
+    .balloon-inside {
+      font-size: 60px;
+      position: inherit;
+      margin-top: 230px;
+      margin-left: -30px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      z-index: 1;
+      transform: none;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .balloon-inside:hover {
+      cursor: pointer;
+    }
+    .birthday-wish {
+      font-family: "Bookman Old Style", serif;
+      font-size: 50px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 80px;
+    }
+    .birthday-love {
+      font-family: "Bookman Old Style", serif;
+      font-size: 30px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 40px;
+    }
+    .directions {
+      font-family: "Geneva", sans-serif;
+      font-size: 22px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .incredibles {
+      font-family: "Bookman Old Style", serif;
+      font-size: 40px;
+      position: absolute;
+      color: yellow;
+      -webkit-text-stroke: 1px black;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
+    .try-again {
+      font-family: "Geneva", sans-serif;
+      color: #b40014;
+      font-size: 30px;
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      padding: 20px;
+      visibility: hidden;
+      border-radius: 50%;
+    }
+    .try-again:hover {
+      cursor: pointer;
+    }
+  }
