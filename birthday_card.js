@@ -7,8 +7,9 @@ window.addEventListener("click", function resizeBalloon(event) {
     const balloon = document.querySelector(".balloon-inside");
     const kidsFlying = document.querySelector(".kids-inside");
     const tryAgain = document.querySelector(".try-again");
+    const explosion = document.querySelector(".explosion");
     if (event.target === balloon) {
-      let size1 = window.getComputedStyle(balloon, null).getPropertyValue("font-size")
+      let size1 = window.getComputedStyle(balloon, null).getPropertyValue("width")
       let heightTop = window.getComputedStyle(balloon, null).getPropertyValue("margin-top");
       let kidsTop = window.getComputedStyle(kidsFlying, null).getPropertyValue("margin-top");
       let kidsLeft = window.getComputedStyle(kidsFlying, null).getPropertyValue("margin-left");
@@ -19,7 +20,7 @@ window.addEventListener("click", function resizeBalloon(event) {
         startBalloonTop = heightTop;
       }
       let larger = parseFloat(size1);
-      if (larger >= 120) {
+      if (larger >= 100) {
         let kaboom = new Audio("http://soundbible.com/mp3/Balloon%20Popping-SoundBible.com-1247261379.mp3")
         let playKaboom = kaboom.play();
         if (playKaboom !== undefined) {
@@ -34,16 +35,18 @@ window.addEventListener("click", function resizeBalloon(event) {
   	    }
         kidsFlying.style.marginTop = startKidsTop;
         kidsFlying.style.marginLeft = startKidsLeft;
-        balloon.innerHTML = "💥";
+        balloon.style.visibility = "hidden";
+        explosion.style.visibility = "visible";
         balloon.style.cursor = "default";
         tryAgain.style.visibility = "visible";
         window.removeEventListener("click", resizeBalloon);
         window.addEventListener("click", event => {
           if (event.target === tryAgain) {
             tryAgain.style.visibility = "hidden";
+            balloon.style.visibility = "visible";
             balloon.style.cursor = "pointer";
-            balloon.innerHTML = "🎈";
-            balloon.style.fontSize = "60px"
+            explosion.style.visibility = "hidden";
+            balloon.style.width = "40px"
             balloon.style.marginTop = startBalloonTop;
             event.preventDefault();
             window.addEventListener("click", resizeBalloon);
@@ -62,13 +65,13 @@ window.addEventListener("click", function resizeBalloon(event) {
             // Show paused UI.
           });
   	    }
-        balloon.style.fontSize = larger * 1.1 + "px";
+        balloon.style.width = larger * 1.2 + "px";
         let higherTop = parseInt(heightTop);
         let kidsHigherTop = parseInt(kidsTop);
         let kidsLefter = parseFloat(kidsLeft);
         balloon.style.marginTop = higherTop - 25 + "px";
-        kidsFlying.style.marginTop = balloon.getBoundingClientRect().bottom + window.pageYOffset - 120 + "px";
-        kidsFlying.style.marginLeft = kidsLefter + 1.5 + "px";
+        kidsFlying.style.marginTop = kidsHigherTop - 10 + "px";
+        kidsFlying.style.marginLeft = kidsLefter + 6 + "px";
         event.preventDefault();
       }
     }
