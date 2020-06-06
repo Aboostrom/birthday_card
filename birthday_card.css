@@ -105,24 +105,34 @@
       margin-bottom: 0px;
     }
     .balloon {
-      font-size: 150px;
+      width: 80px;
       position: absolute;
-      top: 29%;
-      bottom: 71%;
-      right: 58%;
-      left: 42%;
+      top: 120px;
+      bottom: 0;
+      right: 0;
+      left: 234px;
     }
     .balloon-inside {
-      font-size: 60px;
+      width: 40px;
       position: inherit;
-      margin-top: 230px;
-      margin-left: -30px;
+      margin-top: 180px;
+      margin-left: -26px;
       margin-bottom: 0px;
       margin-right: 0px;
       z-index: 1;
       transform: none;
       display: inline-block;
       white-space: nowrap;
+      visibility: visible;
+    }
+    .explosion {
+      visibility: hidden;
+      font-size: 120px;
+      position: inherit;
+      margin-left: 210px;
+      margin-top: 20px;
+      margin-bottom: 0;
+      margin-right: 0;
     }
     .balloon-inside:hover {
       cursor: pointer;
