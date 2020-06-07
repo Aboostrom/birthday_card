@@ -7,7 +7,7 @@ This is an light-hearted and simple birthday card for my 3-year-old nephew. I do
 
 And he even mentions that he got the idea (and majorly tweaked it, for which I am grateful!) from David Walsh at this website: https://davidwalsh.name/css-flip
 
-So if you do happen to see this, and there are any concers, just know it is intended for personal use only. But feel free to reach out to me if there is an issue.
+So if you do happen to see this, and there are any concerns, just know it is intended for personal use only. But feel free to reach out to me if there is an issue.
 
 Thanks!
 
