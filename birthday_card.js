@@ -21,7 +21,7 @@ window.addEventListener("click", function resizeBalloon(event) {
       }
       let larger = parseFloat(size1);
       if (larger >= 100) {
-        let kaboom = new Audio("http://soundbible.com/mp3/Balloon%20Popping-SoundBible.com-1247261379.mp3")
+        let kaboom = new Audio("balloon_popping.mp3")
         let playKaboom = kaboom.play();
         if (playKaboom !== undefined) {
           playKaboom.then(_ => {
@@ -53,7 +53,7 @@ window.addEventListener("click", function resizeBalloon(event) {
           }
         });
       } else {
-        let expand = new Audio("http://soundbible.com/mp3/Balloon%20Blowing%20Up-SoundBible.com-1989230335.mp3")
+        let expand = new Audio("balloon_blowing_up.mp3")
         let playExpand = expand.play();
         if (playExpand !== undefined) {
           playExpand.then(_ => {
