@@ -2,6 +2,8 @@ window.counter = 0;
 window.startKidsTop = "";
 window.startKidsLeft = "";
 window.startBalloonTop = "";
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
 window.addEventListener("click", function resizeBalloon(event) {
     const balloon = document.querySelector(".balloon-inside");
