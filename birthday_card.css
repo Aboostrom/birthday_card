@@ -124,6 +124,7 @@
       display: inline-block;
       white-space: nowrap;
       visibility: visible;
+      outline: none;
     }
     .explosion {
       visibility: hidden;
@@ -181,6 +182,7 @@
       padding: 20px;
       visibility: hidden;
       border-radius: 50%;
+      outline: none;
     }
     .try-again:hover {
       cursor: pointer;
