@@ -11,4 +11,4 @@ So if you do happen to see this, and there are any concerns, just know it is int
 
 Thanks!
 
-Check it out at https://new2science.github.io/birthday_card/index.html
+Check it out at https://aboostrom.github.io/birthday_card/index.html
